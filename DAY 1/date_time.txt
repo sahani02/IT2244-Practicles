@@ -1,0 +1,5 @@
+@echo off
+echo date:%date%
+echo time:%time%
+pause
+

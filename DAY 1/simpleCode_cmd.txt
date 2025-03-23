@@ -1,0 +1,8 @@
+//comand promt simple functions
+color zz	:- display the all colors which can change console foreground and background
+
+color A		:-change console foreground color to Green   
+
+color f		:-change console foreground color to White
+
+date		:-display current date
