@@ -1,0 +1,5 @@
+::Dispay month name using date key word
+@echo off
+echo Current Date: %date%
+powershell -command "& {(Get-Date).ToString('MMMM')}"
+pause

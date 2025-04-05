@@ -1,0 +1,9 @@
+::display year,month,date,day using date key word
+@echo off
+echo current year is :%date%
+echo current year is :%date:~ 10,4%
+echo current month is :%date:~-10,2%
+echo current date is :%date:~-7,2%
+echo current day is :%date:~-14,3%
+echo current year is :%date:~-4%
+pause
