@@ -1,0 +1,122 @@
+Q1).Get the calender and date
+
+cal
+
+Q2).Get the student name and marks for the 3 subjects from user then calculate the "Total" and "Average"
+       Output:-
+	           Enter the name: Isuru
+			   Enter the mark for subject1:80
+			   Enter the mark for subject2:90
+			   Enter the mark for subject3:70
+			   Total = 240
+			   Average = 80
+
+echo "Enter name: "
+read name
+echo "Enter marks for subject1: "
+read s1
+echo "Enter marks for subject2: "
+read s2
+echo "Enter marks for subject3: "
+read s3
+Total=$(($s1+$s2+$s3))
+Average=$(($Total/3))
+echo "The total marks: " $Total
+echo "The average marks: " $Average
+			 
+Q3).Create calculator with arithmatic operators.
+       Output:- 
+	           Enter the first number: 4
+			   Enter the second number: 2
+			   Summation: 6
+			   Substraction: 2
+			   Division:2
+			   Multiplication:8
+
+echo "Enter the first number: "
+read num1
+echo "Enter the second number: "
+read num2
+sum=$(($num1+num2))
+sub=$(($num1-$num2))
+div=$(($num1/$num2))
+mul=$(($num1*num2))
+echo "Summation: " $sum
+echo "Substraction: " $sub
+echo "Division: " $div
+echo "Multiplication: " $mul
+			   
+Q4).Get the days based on the user input number
+       Output:- 
+	           Enter the number: 5
+			   Friday
+			   Enter the number: -9
+			   Unrecognized number
+
+echo "Enter the number: "
+read num
+case $num in
+1)echo "Monday";;
+2)echo "Tuesday";;
+3)echo "Wednesday";;
+4)echo "Thursday";;
+5)echo "Friday";;
+6)echo "Saturday";;
+7)echo "Sunday";;
+*)echo "Unrecognized number";;
+esac
+
+			   
+Q5).Verify whether your user name is correct or not.(use your name as a input)
+       Output:-
+	           Enter user name:
+			   Mino
+			   Enter user name:
+			   Mino
+			   User name is incorrect
+
+
+user=$(whoami)
+read -p "Enter username: " username
+
+if [ "$username" = "$user" ]; then
+    echo "User name is correct"
+else
+    echo "User name is incorrect"
+fi
+
+			   
+Q6).Output:- Enter two numbers:
+             7, 5
+			 7 is greater than 5
+			 
+	Output:- Enter two numbers:
+             1, 9
+			 9 is greater than 1
+			 
+echo "Enter two numbers (separated by space):"
+read num1 num2
+
+if [ $num1 -gt $num2 ]; then
+    echo "$num1 is greater than $num2"
+else
+    echo "$num2 is greater than $num1"  
+fi
+
+			 
+Q7).Create simple calculator using "expr" command same as the Question 03
+
+echo "Enter the first number:"
+read num1
+echo "Enter the second number:"
+read num2
+
+echo "Summation: $(expr $num1 + $num2)"
+echo "Subtraction: $(expr $num1 - $num2)"
+echo "Division: $(expr $num1 / $num2)"
+echo "Multiplication: $(expr $num1 \* $num2)"
+
+			 
+			   
+			   
+			   
