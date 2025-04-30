@@ -1,0 +1,126 @@
+Q1) Print multiplication using for loop
+1 x 2=2
+2 x 2=4
+....
+
+
+let num=2
+mul=1
+for ((i=1; i<=12; i++))
+do
+   mul=$(($num*$i))
+   echo $i " x " $num "= "$mul
+done
+
+Q2)
+      *
+	 ***
+	*****
+   *******
+  *********
+   *******
+    *****
+	 ***
+	  *
+rows=5
+for ((i=1; i<=rows; i++))
+do
+    for ((s=i; s<rows; s++))
+    do
+        echo -n " "
+    done
+    for ((j=1; j<=((2*i-1)); j++))
+    do
+        echo -n "*"
+    done
+    echo
+done
+for ((i=rows-1; i>=1; i--))
+do
+    for ((s=rows; s>i; s--))
+    do
+        echo -n " "
+    done
+    for ((j=1; j<=((2*i-1)); j++))
+    do
+        echo -n "*"
+    done
+echo ""
+done
+
+Q3)
+
+*****
+*   *
+*   *
+*   *
+*****
+
+rows=5
+cols=5
+
+for ((i=1; i<=rows; i++))
+do
+    for ((j=1; j<=cols; j++))
+    do
+        if [ $i -eq 1 ] || [ $i -eq $rows ] || [ $j -eq 1 ] || [ $j -eq $cols ]
+        then
+            echo -n "*"
+        else
+            echo -n " "
+        fi
+    done
+    echo
+done
+
+
+Q4)
+Fibonacci series:
+0 1 1 2 3 5 8 13 21 34
+sum of the first 10 fibonacci numbers is:88
+
+
+a=0
+b=1
+sum=1
+
+echo -n "Fibonacci series: "
+echo -n "$a $b "
+
+for ((i=3; i<=10; i++)); do
+  fn=$((a + b))
+  echo -n "$fn "
+  sum=$((sum + fn))
+  a=$b
+  b=$fn
+done
+
+echo
+echo "sum of the first 10 fibonacci numbers is: $((sum))"
+
+
+Q5)sum of prime numbers between 1 and 100 is:1060 
+
+sum=0
+
+for (( num=2; num<=100; num++ ))
+do
+    is_prime=1
+    for (( i=2; i*i<=num; i++ ))
+    do
+        if (( num % i == 0 )); then
+            is_prime=0
+            break
+        fi
+    done
+
+    if (( is_prime == 1 )); then
+        sum=$((sum + num))
+    fi
+done
+
+echo "Sum of prime numbers from 1 to 100 is: $sum"
+
+
+
+
