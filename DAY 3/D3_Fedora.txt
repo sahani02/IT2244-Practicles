@@ -1,0 +1,65 @@
+# List files and directories in the home directory
+ ls
+Q1.sh  Q2.sh  Q3.sh  Q4.sh  Q5.sh  Q6.sh  Q7.sh  d1  d1.csv  day1.txt  new.txt  test.csv
+
+# Display the contents of the file 'abc.txt' page by page
+ more abc.txt
+hi,I am sahani
+I am 22 years old
+
+# Create an empty file named 'example.txt'
+ touch example.txt
+
+# Open 'example.txt' in the vi text editor for editing
+ vi example.txt
+
+# Display the first 2 lines of 'example.txt'
+head -2 example.txt
+gg      45      56      78
+hh      25      15      15
+
+# Display the first 10 lines (default) of 'example.txt'
+ head example.txt
+gg      45      56      78
+hh      25      15      15
+tt      25      2       25
+aa      11      11      16
+rr      78      8       45
+jj      12      47      6
+
+# Display the last 8 lines of 'example.txt'
+ tail -8 example.txt
+gg      45      56      78
+hh      25      15      15
+tt      25      2       25
+aa      11      11      16
+rr      78      8       45
+jj      12      47      6
+
+# Display the 4th line of 'example.txt'
+ head -n4 example.txt | tail -n1
+aa      11      11      16
+
+# List all files, including hidden ones
+ ls -a
+.              .bash_logout   Q1.sh  Q4.sh  Q7.sh   day1.txt     test.csv
+..             .bash_profile  Q2.sh  Q5.sh  d1      example.txt
+.bash_history  .bashrc        Q3.sh  Q6.sh  d1.csv  new.txt
+
+# List only visible files and directories in the current directory
+ ls
+Q1.sh  Q3.sh  Q5.sh  Q7.sh  d1.csv    example.txt  test.csv
+Q2.sh  Q4.sh  Q6.sh  d1     day1.txt  new.txt
+
+# Print all lines from 'example.txt' using awk
+ awk '{print}' example.txt
+gg      45      56      78
+hh      25      15      15
+tt      25      2       25
+aa      11      11      16
+rr      78      8       45
+jj      12      47      6
+
+# Display the first 10 lines of 'example.txt' and filter only lines containing 'aa'
+ head -n10 example.txt | grep 'aa'
+aa      11      11      16
