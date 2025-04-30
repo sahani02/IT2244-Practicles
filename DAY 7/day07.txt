@@ -1,0 +1,185 @@
+Q1).write a code for small astrology based on your life path number for that get date of birth from user then calculate
+life path number.(use switch case)
+  Example:-
+      calculation for life path number:
+	                      a=date%10
+						  b=date/10
+						  c=a+b
+      if life path number:
+	                      1:Lucky
+						  2:Carefuly do your work
+						  3:Storger
+						  4:Happy
+						  5:Can get help
+						  6:Dought
+						  7:Sad
+						  8:Like
+						  9:Courage
+						  
+read -p "Enter your date of birth: " date
+
+sum=0
+while [ $date -gt 0 ]; do
+    digit=$((date % 10))
+    sum=$((sum + digit))
+    date=$((date / 10))
+done
+
+# Keep reducing to a single digit
+while [ $sum -gt 9 ]; do
+    temp=0
+    while [ $sum -gt 0 ]; do
+        digit=$((sum % 10))
+        temp=$((temp + digit))
+        sum=$((sum / 10))
+    done
+    sum=$temp
+done
+
+case $sum in
+1)echo "Lucky";;
+2)echo "Carefully do your work";;
+3)echo "Storger";;
+4)echo "Happy";;
+5)echo "Can get help";;
+6)echo "Dought";;
+7)echo "Sad";;
+8)echo "Like";;
+9)echo "Courage";;
+*)echo "Invalid number";;
+esac
+
+						  
+Q2).Give list of numbers then calculate the summation and multiplication using for loop
+   Example:-
+      1 2 3 4 5
+	     summation = 15
+	  Multiplication = 120
+	  
+	  Syntax for For loop:
+	      for variable in list 
+		      do
+			  commands
+		  done
+		  
+	  syntax for While loop:
+	      while [ condition ]
+		    do 
+			     commands
+		    done
+			
+sum=0
+mul=1
+for numbers in {1..5}
+do
+   sum=$((sum+numbers))
+   mul=$((mul*numbers))
+done
+
+echo "Summation = " $sum
+echo "Multiplication = " $mul
+
+Q3).Print the integers from 1 to 10 using while loop.
+
+
+i=1
+while [ $i -le 10 ]
+do
+  echo $i
+  ((i++))
+done
+
+
+Q4).Print below pattern using nested loop
+columns=7, rows=7
+i).    *
+       * *
+	   * * *
+	   * * * *
+	   * * * * *
+	   * * * * * *
+	   * * * * * * *
+
+for ((i=1; i<=7; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+    echo
+done
+
+	   
+ii).   * * * * * * *
+       * * * * * * 
+	   * * * * * 
+	   * * * * 
+	   * * *
+	   * *
+	   *
+
+for ((i=7; i>=1; i--))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+    echo
+done
+
+	   
+iii).  1
+       2 2
+	   3 3 3
+	   4 4 4 4 
+	   5 5 5 5 5
+	   6 6 6 6 6 6 
+	   
+
+for ((i=1; i<=6; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "$i "
+    done
+    echo
+done
+
+
+iv).
+	   1
+	   1 2
+	   1 2 3
+	   1 2 3 4 
+	   1 2 3 4 5 
+	   1 2 3 4 5 6
+
+for ((i=1; i<=6; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "$j "
+    done
+    echo
+done
+
+	   
+	   
+v).         *
+           * *
+		  * * *
+		 * * * *
+		* * * * *
+
+for ((i=1; i<=5; i++))
+do
+    for ((s=5; s>i; s--))
+    do
+        echo -n " "
+    done
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+    echo
+done
