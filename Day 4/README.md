@@ -3,49 +3,49 @@ This script performs basic arithmetic operations (addition, subtraction, multipl
 
 Script Breakdown:
 
-  Prompt user to enter the first number:
+    Prompt user to enter the first number:
+    
+    echo "Enter number 1: "
+    read x
+    Displays the message Enter number 1:
+    
+    read x takes input from the user and stores it in variable x.
+    
+    Prompt user to enter the second number:
+    
+    echo "Enter number 2: "
+    read y
+    Displays the message Enter number 2:
+    
+    read y stores the input in variable y.
+    
+    Perform addition:
   
-  echo "Enter number 1: "
-  read x
-  Displays the message Enter number 1:
-  
-  read x takes input from the user and stores it in variable x.
-  
-  Prompt user to enter the second number:
-  
-  echo "Enter number 2: "
-  read y
-  Displays the message Enter number 2:
-  
-  read y stores the input in variable y.
-  
-  Perform addition:
-  
-  addition=$(($x + $y))
-  Calculates the sum of x and y and stores it in the variable addition.
-  
-  Perform subtraction:
-  
-  substraction=$(($x - $y))
-  Calculates x minus y.
-  
-  Perform multiplication:
-  
-  multiplication=$(($x * $y))
-  Calculates x times y.
-  
-  Perform division:
-  
-  division=$(($x / $y))
-  Calculates x divided by y (integer division; decimals will be truncated).
-  
-  Display the results:
-  
-  echo "Addition: $addition"
-  echo "Substraction: $substraction"
-  echo "Multiplication: $multiplication"
-  echo "Division: $division"
-  Outputs the results of each operation.
+    addition=$(($x + $y))
+    Calculates the sum of x and y and stores it in the variable addition.
+    
+    Perform subtraction:
+    
+    substraction=$(($x - $y))
+    Calculates x minus y.
+    
+    Perform multiplication:
+    
+    multiplication=$(($x * $y))
+    Calculates x times y.
+    
+    Perform division:
+    
+    division=$(($x / $y))
+    Calculates x divided by y (integer division; decimals will be truncated).
+    
+    Display the results:
+    
+    echo "Addition: $addition"
+    echo "Substraction: $substraction"
+    echo "Multiplication: $multiplication"
+    echo "Division: $division"
+    Outputs the results of each operation.
 
 ![Screenshot 2025-04-30 151034](https://github.com/user-attachments/assets/14367ac0-2316-47e1-9a7e-7e1b100606d8)
 
