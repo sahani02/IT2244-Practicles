@@ -10,18 +10,10 @@ return 0;
 int main(){
 int age;
 age=25;
-int age =25;
+int num =25;
 }
 
-
-#include<stdio.h>
-int main(){
-int age=25;
-print(age);
-return 0;
-}
-
-
+//print variable value as output
 #include<stdio.h>
 int main(){
 int age=25;
@@ -44,8 +36,8 @@ return 0;
 #include<stdio.h>
 int main(){
 int firstNumber,secondNumber=25;
-printf("First number:%d",firstNumber);
-printf("second number:%d",secondNumber);
+printf("First number:%d\n",firstNumber);
+printf("second number:%d\n",secondNumber);
 return 0;
 }
 
@@ -53,7 +45,7 @@ return 0;
 #include<stdio.h>
 int main(){
 int age=25;
-printf("%d",age);
+printf("%d\n",age);
 printf("size:%zu",sizeof(age));
 return 0;
 }
@@ -62,12 +54,12 @@ return 0;
 #include<stdio.h>
 int main(){
 double number=12.45;
-printf("%lf",number); //12.450000
-printf("%.2lf",number); //12.45
+printf("%lf\n",number); //12.450000
+printf("%.2lf\n",number); //12.45
 
 float number1=10.9f;
-printf("%f",number1); //10.900000
-printf("%.1f",number1); //10.9
+printf("%f\n",number1); //10.900000
+printf("%.1f\n",number1); //10.9
 
 char character='z';
 printf("%c\n",character);
@@ -80,24 +72,18 @@ return 0;
 int main(){
 int age;
 printf("Enter ytour age:");
-//printf("%d",age);
 scanf("%d", &age);
-printf("Age=%d",age);
+printf("Age=%d\n",age);
 
 double number;
 char alpha;
-
 printf("enter double input: ");
 scanf("%lf", &number);
-printf("\nyour double input is:%lf",number);
+printf("your double input is:%lf\n",number);
 
-printf("\nenter char input: ");
-scanf("%c", &alpha);
-printf("your char input is:%c\n",alpha);
-
-printf("Enter input:");
-scanf("%lf %c", &number,&alpha);
-
+printf("enter char input: ");
+scanf(" %c", &alpha);
+printf("your char input is: %c\n",alpha);
 return 0;
 }
 
@@ -129,5 +115,5 @@ printf("\nenter n2: ");
 scanf("%d", &n2);
 
 printf("\nReminder:%d",n1/n2);
-return 0
+return 0;
 }
