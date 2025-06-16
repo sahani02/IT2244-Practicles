@@ -10,3 +10,6 @@
 
 ![Screenshot 2025-06-16 123618](https://github.com/user-attachments/assets/21bc6e38-a95a-40df-8e44-063c5fb1ab66)
 
+- threadsum.c
+  
+![Screenshot 2025-06-16 124831](https://github.com/user-attachments/assets/8596ff86-e135-4776-a089-193e6abeb72f)
