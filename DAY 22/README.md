@@ -1,3 +1,5 @@
+**OUTPUTS**
+
 - Q1.c
   
 ![Screenshot 2025-06-20 140944](https://github.com/user-attachments/assets/409f8c07-2041-4de6-b2d3-0eb214c9ee5c)
