@@ -7,7 +7,7 @@
 void* count_to_ten(void* arg) {
     for (int i = 1; i <= 10; i++) {
         printf("%d\n", i);
-        sleep(1);
+        sleep(1);//sleep for 1 second
     }
     return NULL;
 }
